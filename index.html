@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>MindBalance - Privacy Policy</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 { color: #2c3e50; text-align: center; }
+        h2 { color: #34495e; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .contact { background: #f8f9fa; padding: 15px; border-radius: 5px; }
+        .language-switcher { text-align: center; margin: 20px 0; }
+        .language-switcher button { 
+            margin: 0 10px; 
+            padding: 10px 20px;
+            border: none;
+            background: #667eea;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .language { display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <button onclick="showLanguage('kk')">Қазақша</button>
+        <button onclick="showLanguage('ru')">Русский</button>
+    </div>
+
+    <!-- КАЗАХСКАЯ ВЕРСИЯ -->
+    <div id="kk" class="language active">
+        <h1>MindBalance - ҚҰПИЯЛЫЛЫҚ САЯСАТЫ</h1>
+        <p><strong>Соңғы жаңарту:</strong> 15 желтоқсан 2024 жыл</p>
+
+        <h2>1. Кіріспе</h2>
+        <p>MindBalance - психикалық денсаулықты бақылауға арналған мобильді қолданба.</p>
+
+        <h2>2. Жиналатын ақпарат</h2>
+        <ul>
+            <li>Көңіл-күй деректері</li>
+            <li>Психологиялық тест нәтижелері (PHQ-9, GAD-7)</li>
+            <li>Күнделік жазбалары</li>
+            <li>Ұйқы, белсенділік, су мөлшері деректері</li>
+        </ul>
+
+        <h2>3. Деректерді сақтау</h2>
+        <p><strong>Барлық деректер сіздің құрылғыңызда жергілікті түрде сақталады.</strong></p>
+        <p>Біз сіздің жеке деректеріңізге қол жеткізе алмаймыз және үшінші тұлғаларға жібермейміз.</p>
+
+        <h2>4. Қолдану шарттары</h2>
+        <p>Қолданба медициналық көмекті ауыстырмайды. Төтенше жағдайларда мамандарға жүгініңіз.</p>
+
+        <div class="contact">
+            <h2>5. Байланыс</h2>
+            <p>Email: mindbalancekz@gmail.com</p>
+            <p>Қазақстан</p>
+        </div>
+
+        <hr>
+        <p><small>© 2024 MindBalance. Барлық құқықтар қорғалған.</small></p>
+    </div>
+
+    <!-- РУССКАЯ ВЕРСИЯ -->
+    <div id="ru" class="language">
+        <h1>MindBalance - ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h1>
+        <p><strong>Последнее обновление:</strong> 15 декабря 2024 года</p>
+
+        <h2>1. Введение</h2>
+        <p>MindBalance - мобильное приложение для отслеживания ментального здоровья.</p>
+
+        <h2>2. Собираемая информация</h2>
+        <ul>
+            <li>Данные о настроении</li>
+            <li>Результаты психологических тестов (PHQ-9, GAD-7)</li>
+            <li>Дневниковые записи</li>
+            <li>Данные о сне, активности, потреблении воды</li>
+        </ul>
+
+        <h2>3. Хранение данных</h2>
+        <p><strong>Все данные хранятся локально на вашем устройстве.</strong></p>
+        <p>Мы не имеем доступа к вашим персональным данным и не передаем их третьим лицам.</p>
+
+        <h2>4. Условия использования</h2>
+        <p>Приложение не заменяет медицинскую помощь. В экстренных случаях обращайтесь к специалистам.</p>
+
+        <div class="contact">
+            <h2>5. Контакты</h2>
+            <p>Email: mindbalancekz@gmail.com</p>
+            <p>Казахстан</p>
+        </div>
+
+        <hr>
+        <p><small>© 2024 MindBalance. Все права защищены.</small></p>
+    </div>
+
+    <script>
+        function showLanguage(lang) {
+            // Скрываем все языки
+            document.querySelectorAll('.language').forEach(function(element) {
+                element.classList.remove('active');
+            });
+            
+            // Показываем выбранный язык
+            document.getElementById(lang).classList.add('active');
+            
+            // Обновляем кнопки
+            document.querySelectorAll('.language-switcher button').forEach(function(button) {
+                button.style.background = '#667eea';
+            });
+            event.target.style.background = '#805ad5';
+        }
+
+        // Автоматическое определение языка браузера
+        if (navigator.language.startsWith('ru')) {
+            showLanguage('ru');
+        } else {
+            showLanguage('kk');
+        }
+    </script>
+</body>
+</html>
