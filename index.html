@@ -1,128 +1,311 @@
-<!DOCTYPE html>
-<html lang="kk">
-<head>
-    <meta charset="UTF-8">
-    <title>MindBalance - Privacy Policy</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1 { color: #2c3e50; text-align: center; }
-        h2 { color: #34495e; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .contact { background: #f8f9fa; padding: 15px; border-radius: 5px; }
-        .language-switcher { text-align: center; margin: 20px 0; }
-        .language-switcher button { 
-            margin: 0 10px; 
-            padding: 10px 20px;
-            border: none;
-            background: #667eea;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .language { display: none; }
-        .active { display: block; }
-    </style>
-</head>
-<body>
-    <div class="language-switcher">
-        <button onclick="showLanguage('kk')">Қазақша</button>
-        <button onclick="showLanguage('ru')">Русский</button>
-    </div>
+// Обновленные тексты для политики конфиденциальности
+const LEGAL_TEXTS = {
+  privacy: {
+    ru: `ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ MIND BALANCE
 
-    <!-- КАЗАХСКАЯ ВЕРСИЯ -->
-    <div id="kk" class="language active">
-        <h1>MindBalance - ҚҰПИЯЛЫЛЫҚ САЯСАТЫ</h1>
-        <p><strong>Соңғы жаңарту:</strong> 15 желтоқсан 2024 жыл</p>
+1. Введение
+MindBalance серьезно относится к защите вашей конфиденциальности. Эта Политика описывает, как мы собираем, используем и защищаем ваши данные.
 
-        <h2>1. Кіріспе</h2>
-        <p>MindBalance - психикалық денсаулықты бақылауға арналған мобильді қолданба.</p>
+2. Собираемая информация
+• Учетные данные Google (имя, email, ID) для аутентификации
+• Данные о психическом здоровье (настроение, тесты, дневник)
+• Данные об использовании приложения
+• Техническая информация
 
-        <h2>2. Жиналатын ақпарат</h2>
-        <ul>
-            <li>Көңіл-күй деректері</li>
-            <li>Психологиялық тест нәтижелері (PHQ-9, GAD-7)</li>
-            <li>Күнделік жазбалары</li>
-            <li>Ұйқы, белсенділік, су мөлшері деректері</li>
-        </ul>
+3. Правовые основания
+Обработка данных осуществляется на основе:
+• Вашего явного согласия
+• Выполнения договорных обязательств
+• Законных интересов
 
-        <h2>3. Деректерді сақтау</h2>
-        <p><strong>Барлық деректер сіздің құрылғыңызда жергілікті түрде сақталады.</strong></p>
-        <p>Біз сіздің жеке деректеріңізге қол жеткізе алмаймыз және үшінші тұлғаларға жібермейміз.</p>
+4. Использование данных Google API
+Мы используем Google API Services в строгом соответствии с политиками Google:
+• Используем данные только для предоставления функций приложения
+• Не передаем данные третьим сторонам
+• Не используем данные для рекламы
+• Обеспечиваем безопасное хранение
 
-        <h2>4. Қолдану шарттары</h2>
-        <p>Қолданба медициналық көмекті ауыстырмайды. Төтенше жағдайларда мамандарға жүгініңіз.</p>
+5. Ваши права
+Вы имеете право:
+• Доступа к вашим данным
+• Исправления неточностей
+• Удаления данных
+• Переносимости данных
+• Отзыва согласия
 
-        <div class="contact">
-            <h2>5. Байланыс</h2>
-            <p>Email: mindbalancekz@gmail.com</p>
-            <p>Қазақстан</p>
-        </div>
+6. Безопасность
+• Все данные шифруются на устройстве
+• Используется защищенная передача данных
+• Локальное хранение с возможностью экспорта
 
-        <hr>
-        <p><small>© 2024 MindBalance. Барлық құқықтар қорғалған.</small></p>
-    </div>
+7. Сроки хранения
+Данные хранятся до удаления аккаунта пользователем.
 
-    <!-- РУССКАЯ ВЕРСИЯ -->
-    <div id="ru" class="language">
-        <h1>MindBalance - ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h1>
-        <p><strong>Последнее обновление:</strong> 15 декабря 2024 года</p>
+8. Контакты
+По вопросам защиты данных: mindbalancekz@gmail.com
 
-        <h2>1. Введение</h2>
-        <p>MindBalance - мобильное приложение для отслеживания ментального здоровья.</p>
+Полная версия политики: https://mindbalancekz.github.io/mindbalance-privacy/`,
 
-        <h2>2. Собираемая информация</h2>
-        <ul>
-            <li>Данные о настроении</li>
-            <li>Результаты психологических тестов (PHQ-9, GAD-7)</li>
-            <li>Дневниковые записи</li>
-            <li>Данные о сне, активности, потреблении воды</li>
-        </ul>
+    kk: `MIND BALANCE ҚҰПИЯЛЫЛЫҚ САЯСАТЫ
 
-        <h2>3. Хранение данных</h2>
-        <p><strong>Все данные хранятся локально на вашем устройстве.</strong></p>
-        <p>Мы не имеем доступа к вашим персональным данным и не передаем их третьим лицам.</p>
+1. Кіріспе
+MindBalance сіздің құпиялылығыңызды қорғауға баса назар аударады.
 
-        <h2>4. Условия использования</h2>
-        <p>Приложение не заменяет медицинскую помощь. В экстренных случаях обращайтесь к специалистам.</p>
+2. Жиналатын ақпарат
+• Google тіркелгі деректері (аты, email, ID)
+• Психикалық денсаулық деректері
+• Қолданбаны пайдалану деректері
+• Техникалық ақпарат
 
-        <div class="contact">
-            <h2>5. Контакты</h2>
-            <p>Email: mindbalancekz@gmail.com</p>
-            <p>Казахстан</p>
-        </div>
+3. Заңды негіздер
+Деректерді өңдеу:
+• Сіздің келісіміңізбен
+• Келісімшарттық міндеттемелерді орындау үшін
+• Заңды мүдделер негізінде
 
-        <hr>
-        <p><small>© 2024 MindBalance. Все права защищены.</small></p>
-    </div>
+4. Google API деректерін пайдалану
+Біз Google API Services-ті Google саясатына сәйкес пайдаланамыз:
+• Деректерді тек қолданба мүмкіндіктерін ұсыну үшін пайдаланамыз
+• Деректерді үшінші тұлғаларға бермейміз
+• Жарнама үшін пайдаланбаймыз
+• Қауіпсіз сақтауды қамтамасыз етеміз
 
-    <script>
-        function showLanguage(lang) {
-            // Скрываем все языки
-            document.querySelectorAll('.language').forEach(function(element) {
-                element.classList.remove('active');
-            });
+5. Сіздің құқықтарыңыз
+Сізде келесі құқықтар бар:
+• Деректерге қол жеткізу
+• Қателерді түзету
+• Деректерді жою
+• Деректерді көшіру
+• Келісімді кері тарту
+
+6. Қауіпсіздік
+• Барлық деректер құрылғыда шифрланады
+• Қауіпсіз деректер тасымалдауы
+• Жергілікті сақтау экспорттау мүмкіндігімен
+
+7. Сақтау мерзімдері
+Деректер пайдаланушы есептік жазбасын жойғанға дейін сақталады.
+
+8. Байланыс
+Деректерді қорғау бойынша сұрақтар үшін: mindbalancekz@gmail.com
+
+Толық нұсқасы: https://mindbalancekz.github.io/mindbalance-privacy/`
+  },
+  terms: {
+    ru: `ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ MIND BALANCE
+
+1. Общие положения
+1.1. MindBalance - мобильное приложение для отслеживания ментального здоровья.
+1.2. Используя приложение, вы соглашаетесь с условиями настоящего соглашения.
+
+2. Услуги приложения
+2.1. Отслеживание настроения и привычек
+2.2. Психологические тесты и дневник
+2.3. Дыхательные упражнения и релаксация
+
+3. Медицинские ограничения
+3.1. Приложение не заменяет профессиональную медицинскую помощь.
+3.2. В экстренных случаях обращайтесь к специалистам.
+
+4. Использование Google Sign-In
+4.1. Аутентификация через Google осуществляется в соответствии с политиками Google API Services.
+4.2. Мы используем данные только для предоставления услуг приложения.
+
+5. Интеллектуальная собственность
+5.1. Все права на приложение и его контент принадлежат MindBalance.
+
+6. Ограничение ответственности
+6.1. Мы не несем ответственности за решения, принятые на основе данных приложения.
+
+7. Изменения условий
+7.1. Мы можем изменять условия соглашения с уведомлением пользователей.
+
+Контакты: mindbalancekz@gmail.com`,
+
+    kk: `MIND BALANCE ПАЙДАЛАНУШЫ КЕЛІСІМІ
+
+1. Жалпы ережелер
+1.1. MindBalance - психикалық денсаулықты бақылауға арналған мобильді қолданба.
+1.2. Қолданбаны пайдалану арқылы сіз осы келісімнің шарттарымен келісесіз.
+
+2. Қолданба қызметтері
+2.1. Көңіл-күй мен дағдыларды бақылау
+2.2. Психологиялық тесттер мен күнделік
+2.3. Тыныс алу жаттығулары және релаксация
+
+3. Медициналық шектеулер
+3.1. Қолданба кәсіби медициналық көмекті ауыстырмайды.
+3.2. Төтенше жағдайларда мамандарға жүгініңіз.
+
+4. Google Sign-In пайдалану
+4.1. Google арқылы аутентификация Google API Services саясатына сәйкес жүзеге асырылады.
+4.2. Біз деректерді тек қолданба қызметтерін ұсыну үшін пайдаланамыз.
+
+5. Зияткерлік меншік
+5.1. Қолданбаға және оның мазмұнына қатысты барлық құқықтар MindBalance-ке тиесілі.
+
+6. Жауапкершілікті шектеу
+6.1. Біз қолданба деректері негізінде қабылданған шешімдер үшін жауапты емеспіз.
+
+7. Шарттарды өзгерту
+7.1. Біз пайдаланушыларды хабардар ету арқылы келісім шарттарын өзгерте аламыз.
+
+Байланыс: mindbalancekz@gmail.com`
+  }
+};
+
+// Обновленная функция для Google Sign-In с явным согласием
+const GoogleSignInButton = ({ language, theme, onPress }) => {
+  const [showConsent, setShowConsent] = useState(false);
+
+  const handlePress = () => {
+    setShowConsent(true);
+  };
+
+  const handleConsent = async () => {
+    // Сохраняем согласие пользователя
+    await AsyncStorage.setItem('privacy_consent', 'true');
+    await AsyncStorage.setItem('privacy_consent_date', new Date().toISOString());
+    onPress();
+    setShowConsent(false);
+  };
+
+  return (
+    <View>
+      <TouchableOpacity
+        style={[styles.googleButton, { backgroundColor: theme.background }]}
+        onPress={handlePress}
+      >
+        <Text style={[styles.buttonText, { color: theme.text }]}>
+          🚀 {language === 'ru' ? 'Войти через Google' : 'Google арқылы кіру'}
+        </Text>
+      </TouchableOpacity>
+
+      <Modal
+        visible={showConsent}
+        transparent={true}
+        animationType="slide"
+      >
+        <View style={styles.consentModal}>
+          <View style={[styles.consentContent, { backgroundColor: theme.background }]}>
+            <Text style={[styles.consentTitle, { color: theme.text }]}>
+              {language === 'ru' ? 'Согласие на обработку данных' : 'Деректерді өңдеуге келісім'}
+            </Text>
             
-            // Показываем выбранный язык
-            document.getElementById(lang).classList.add('active');
-            
-            // Обновляем кнопки
-            document.querySelectorAll('.language-switcher button').forEach(function(button) {
-                button.style.background = '#667eea';
-            });
-            event.target.style.background = '#805ad5';
-        }
+            <ScrollView style={styles.consentScroll}>
+              <Text style={[styles.consentText, { color: theme.text }]}>
+                {language === 'ru' 
+                  ? `Для использования MindBalance нам необходимо ваше согласие на обработку данных:
 
-        // Автоматическое определение языка браузера
-        if (navigator.language.startsWith('ru')) {
-            showLanguage('ru');
-        } else {
-            showLanguage('kk');
-        }
-    </script>
-</body>
-</html>
+• Данные аутентификации Google (имя, email)
+• Данные о вашем психическом здоровье
+• Результаты тестов и записи в дневнике
+• Данные об использовании приложения
+
+Мы обязуемся:
+• Использовать данные только для предоставления услуг
+• Не передавать данные третьим лицам
+• Обеспечивать безопасное хранение
+• Предоставлять вам контроль над вашими данными
+
+Нажимая "Согласен", вы подтверждаете, что прочитали и согласны с нашей Политикой конфиденциальности.`
+                  : `MindBalance пайдалану үшін бізге деректерді өңдеуге келісіміңіз қажет:
+
+• Google аутентификация деректері (аты, email)
+• Психикалық денсаулығыңыз туралы деректер
+• Тест нәтижелері мен күнделік жазбалары
+• Қолданбаны пайдалану деректері
+
+Біз міндеттеміз:
+• Деректерді тек қызмет көрсету үшін пайдалану
+• Деректерді үшінші тұлғаларға бермеу
+• Қауіпсіз сақтауды қамтамасыз ету
+• Деректеріңізге бақылауды қамтамасыз ету
+
+"Келісемін" түймесін басу арқылы сіз біздің Құпиялылық саясатымызды оқығаныңызды және келіскеніңізді растайсыз.`}
+              </Text>
+            </ScrollView>
+
+            <View style={styles.consentButtons}>
+              <TouchableOpacity 
+                style={[styles.consentButton, { backgroundColor: '#6c757d' }]}
+                onPress={() => setShowConsent(false)}
+              >
+                <Text style={styles.consentButtonText}>
+                  {language === 'ru' ? 'Отклонить' : 'Бас тарту'}
+                </Text>
+              </TouchableOpacity>
+              
+              <TouchableOpacity 
+                style={[styles.consentButton, { backgroundColor: theme.primary }]}
+                onPress={handleConsent}
+              >
+                <Text style={styles.consentButtonText}>
+                  {language === 'ru' ? 'Согласен' : 'Келісемін'}
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <TouchableOpacity onPress={() => Linking.openURL('https://mindbalancekz.github.io/mindbalance-privacy/')}>
+              <Text style={[styles.privacyLink, { color: theme.primary }]}>
+                {language === 'ru' ? 'Полная Политика конфиденциальности' : 'Толық Құпиялылық саясаты'}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+    </View>
+  );
+};
+
+// Добавьте эти стили
+const styles = StyleSheet.create({
+  consentModal: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  consentContent: {
+    width: '100%',
+    maxHeight: '80%',
+    borderRadius: 20,
+    padding: 20,
+  },
+  consentTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  consentScroll: {
+    maxHeight: 300,
+    marginBottom: 20,
+  },
+  consentText: {
+    fontSize: 14,
+    lineHeight: 20,
+  },
+  consentButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 15,
+  },
+  consentButton: {
+    flex: 1,
+    padding: 15,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginHorizontal: 5,
+  },
+  consentButtonText: {
+    color: 'white',
+    fontWeight: '600',
+  },
+  privacyLink: {
+    textAlign: 'center',
+    textDecorationLine: 'underline',
+    fontSize: 14,
+  },
+});
